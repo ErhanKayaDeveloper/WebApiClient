@@ -166,7 +166,7 @@ namespace WebApiClient.Controllers
                 client.BaseAddress = new Uri(Url);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage mesaj = client.GetAsync(Api + id).Result;//api/urunyonetimi/5
+                HttpResponseMessage mesaj = client.GetAsync(Api + id).Result;//api/urunyonetimi/5s
 
                 if (mesaj.IsSuccessStatusCode)
                 {
