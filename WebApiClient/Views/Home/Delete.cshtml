@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Product Delete</h2>
+<label class="text-info">@ViewBag.mesaj</label>
+
+<div class="container">
+    <form method="post" action="~/Home/Delete">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Api Url</label>
+                <input type="text" name="Url" id="Url" placeholder="https://localhost:44378/" class="form-control" />
+            </div>
+            <div class="col-md-4">
+                <label>Api</label>
+                <input type="text" name="Api" id="Api" placeholder="api/urunyonetimi/" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label>Silinece Ürün Id'si</label>
+                <input type="number" name="id" id="id" placeholder="5" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-danger">Ürün Sil</button>
+            </div>
+        </div>
+    </form>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

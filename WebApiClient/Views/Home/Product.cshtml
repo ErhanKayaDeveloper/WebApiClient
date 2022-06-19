@@ -1,0 +1,78 @@
+﻿@model WebApiClient.Models.Product
+
+@{
+    ViewBag.Title = "Product";
+}
+
+<h2>Product</h2>
+
+
+<div class="container">
+    <form method="post" action="~/Home/Product">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Api Url</label>
+                <input type="text" name="Url" id="Url" placeholder="https://localhost:44378/" class="form-control" />
+            </div>
+            <div class="col-md-4">
+                <label>Api</label>
+                <input type="text" name="Api" id="Api" placeholder="api/urunyonetimi/" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label>Api</label>
+                <input type="number" name="id" id="id" placeholder="5" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-success">Ürün Getir</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
